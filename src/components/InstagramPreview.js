@@ -15,6 +15,11 @@ export default function InstagramPreview() {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
+  const openGallery = (idx) => {
+    setIndex(idx);
+    setOpen(true);
+  };
+
   return (
     <>
       <section className="insta-preview">
@@ -22,15 +27,15 @@ export default function InstagramPreview() {
 
         <div className="insta-grid">
           {images.map((src, idx) => (
-            <a
+            <button
               key={idx}
-              onClick={() => {
-                setIndex(idx);
-                setOpen(true);
-              }}
+              type="button"
+              className="insta-item"
+              onClick={() => openGallery(idx)}
+              aria-label={`인스타 사진 ${idx + 1} 보기`}
             >
               <img src={src} alt={`insta-${idx}`} />
-            </a>
+            </button>
           ))}
         </div>
       </section>
