@@ -36,3 +36,113 @@
     transform: rotate(360deg);
   }
 }
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+}
+
+.service-list li strong {
+  display: block;
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.service-list li span {
+  font-size: 14px;
+  color: var(--muted);
+}
+.gallery-modal {
+  width: min(90vw, 420px);
+  background: #000;
+  border-radius: 14px;
+  padding: 12px;
+  position: relative;
+}
+
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.gallery-controls button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+.reservation {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 0 16px;
+}
+
+.reservation-card {
+  background: #fff;
+  border-radius: 28px;
+  padding: 28px 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.price-item {
+  margin-bottom: 22px;
+}
+
+.price-item h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #6b3e2e;
+}
+
+.price-item p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.price-item.sub {
+  font-size: 13px;
+  color: #777;
+}
+
+.highlight {
+  color: #ff7f87;
+  font-weight: 700;
+}
+
+.reservation-guide {
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px dashed #f0cfd3;
+  text-align: center;
+}
+
+.dm-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.insta-btn {
+  margin-top: 24px;
+  width: 100%;
+  font-size: 15px;
+}
+

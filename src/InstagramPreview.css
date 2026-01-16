@@ -1,0 +1,136 @@
+.insta-preview {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* grid 셀 = 고정 정사각형 */
+.insta-grid a {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #eee; /* 로딩 중에도 높이 유지 */
+}
+
+/* 이미지 강제 정렬 */
+.insta-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 인스타 방식 */
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+/* hover 확대 */
+.insta-grid a:hover img {
+  transform: scale(1.08);
+}
+
+/* 오버레이 */
+.insta-grid a::after {
+  content: 'View';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.insta-grid a:hover::after {
+  opacity: 1;
+}
+/* 배경 */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* 모달 박스 크기 고정 */
+.gallery-modal {
+  width: min(92vw, 420px);
+  height: min(82vh, 560px);
+  background: #000;
+  border-radius: 18px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 이미지 강제 고정 */
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  object-position: center;
+}
+
+/* 닫기 버튼 */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* 컨트롤 */
+.gallery-controls {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+}
+
+.gallery-controls button {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
