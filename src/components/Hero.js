@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 export default function Hero({ onOpenProfile }) {
-  const images = ['IMG/7.jpg', 'IMG/4.jpg', 'IMG/5.jpg', 'IMG/8.jpg'];
+  const images = ['/IMG/7.jpg', '/IMG/4.jpg', '/IMG/5.jpg', '/IMG/8.jpg'];
   const [current, setCurrent] = useState(0);
   const slideRef = useRef(null);
 
